@@ -43,6 +43,7 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0 24px}
 <li><b>Atrašanās vieta:</b> kamēr esi pievienojies medībām un kopīgošana ir ieslēgta, telefons sūta komandai savas koordinātas, precizitāti, kustības virzienu un akumulatora līmeni. iPhone aplikācija to dara arī fonā, ja atļauj atrašanās vietu “Vienmēr”. Kopīgošanu var izslēgt sadaļā Vairāk, Iestatījumi.</li>
 <li><b>Medību dati:</b> medību nosaukums, kods un plāns, atzīmes kartē (torņi, novērojumi, nomedītie dzīvnieki) ar fotogrāfijām, čata ziņas, medību zona, maršrutu ieraksti, SOS signāli un medību vadītāja pievienoto GPS trackeru (piemēram, suņu kaklasiksnu) atrašanās vietas.</li>
 <li><b>Medību parole:</b> serverī glabājas tikai tās jaucējvērtība (hash), nevis pati parole.</li>
+<li><b>Medību platība:</b> ja pievienojies medību platībai, serveris glabā tās nosaukumu, dalībnieku vārdus un torņu atrašanās vietas ar nosaukumiem un piezīmēm, ko dalībnieki ievadījuši. Platības parole glabājas tikai kā jaucējvērtība (hash). Platības torņus redz tās dalībnieki un tie, kas piedalās medībās, kurām vadītājs platību piesaistījis.</li>
 <li><b>Paziņojumi tīmekļa versijā:</b> ja tos ieslēdz, serveris glabā paziņojumu abonementu (adresi un atslēgas), lai varētu nosūtīt SOS un citus brīdinājumus. iPhone aplikācijas versija 1.0 paziņojumus nesūta.</li>
 </ul>
 </section>
@@ -51,7 +52,7 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0 24px}
 <h2>Kur dati glabājas</h2>
 <ul>
 <li><b>Serverī:</b> mūsu pašu serverī Vācijā (Hetzner, Falkenšteinā).</li>
-<li><b>Telefonā:</b> profils, iestatījumi un medību dati (arī medību kods un parole), lai aplikācija strādātu bez sakariem. Tos vari izdzēst sadaļā Vairāk ar pogu “Dzēst visus ierīces datus”.</li>
+<li><b>Telefonā:</b> profils, iestatījumi, medību dati (arī medību kods un parole) un medību platības torņi, lai aplikācija strādātu bez sakariem. Tos vari izdzēst sadaļā Vairāk ar pogu “Dzēst visus ierīces datus”.</li>
 </ul>
 </section>
 
@@ -61,6 +62,7 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0 24px}
 <li>Dalībnieka ieraksts (vārds, loma, pēdējā atrašanās vieta un akumulatora līmenis) tiek dzēsts pēc 24 stundām bez signāla.</li>
 <li>Maršruta vēsture tiek dzēsta 7 dienas pēc tās pēdējā punkta.</li>
 <li>Medības ar visām atzīmēm, fotogrāfijām, čatu, zonu un paziņojumu abonementiem tiek dzēstas pēc 30 dienām bez aktivitātes.</li>
+<li>Medību platība ar visiem torņiem tiek dzēsta 12 mēnešus pēc tam, kad neviens tās dalībnieks to vairs nav atvēris. Platības īpašnieks to var dzēst uzreiz.</li>
 </ul>
 </section>
 
@@ -108,6 +110,7 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0 24px}
 <li><b>Location:</b> while you are in a hunt and sharing is on, the phone sends your coordinates, accuracy, heading and battery level to your team. The iPhone app also does this in the background if you allow location “Always”. You can switch sharing off under Vairāk (More), Iestatījumi (Settings).</li>
 <li><b>Hunt data:</b> the hunt's name, code and plan, map markers (stands, observations, harvested game) with photos, chat messages, the hunt area, recorded routes, SOS signals, and the positions of GPS trackers (for example dog collars) that the hunt leader adds.</li>
 <li><b>Hunt password:</b> the server stores only its hash, never the password itself.</li>
+<li><b>Hunting ground:</b> if you join a hunting ground, the server stores its name, its members' names and the positions of its towers with the names and notes members entered. A ground password is stored only as a hash. A ground's towers are seen by its members and by everyone in a hunt the leader has linked to it.</li>
 <li><b>Notifications in the web version:</b> if you switch them on, the server stores the push subscription (address and keys) so it can deliver SOS and other alerts. The iPhone app version 1.0 sends no notifications.</li>
 </ul>
 </section>
@@ -116,7 +119,7 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0 24px}
 <h2>Where data is stored</h2>
 <ul>
 <li><b>On the server:</b> our own server in Germany (Hetzner, Falkenstein).</li>
-<li><b>On the phone:</b> your profile, settings and hunt data (including the hunt code and password), so the app works without a connection. You can delete them under Vairāk (More) with the button “Dzēst visus ierīces datus” (delete all device data).</li>
+<li><b>On the phone:</b> your profile, settings, hunt data (including the hunt code and password) and hunting ground towers, so the app works without a connection. You can delete them under Vairāk (More) with the button “Dzēst visus ierīces datus” (delete all device data).</li>
 </ul>
 </section>
 
@@ -126,6 +129,7 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0 24px}
 <li>A member's entry (name, role, last position and battery level) is deleted after 24 hours without a signal.</li>
 <li>A route history is deleted 7 days after its last point.</li>
 <li>A hunt, with all its markers, photos, chat, area and push subscriptions, is deleted after 30 days without activity.</li>
+<li>A hunting ground with all its towers is deleted 12 months after no member has opened it. Its owner can delete it at once.</li>
 </ul>
 </section>
 
